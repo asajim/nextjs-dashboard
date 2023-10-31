@@ -94,6 +94,7 @@ export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
 ) {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
